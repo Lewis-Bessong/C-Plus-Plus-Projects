@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+
+using namespace std; 
+
+ // Brief About Me (getting familliar with output, variables, as well as new line methods)
+
+int main() {
+string MyName = "Lewis"; 
+    cout << "Hello my Name is " << MyName << ".";
+    cout << " This is my first time learning C++, as well as my first 'project' for C++.\n";
+    cout << "While this might be my first time using C++,"; 
+    cout << " im not a complete beginner towards coding.\n\n";
+ 
+    cout << "Ive previously learned python which has hepled me towards leanring C++,\n";
+    cout << " however, the switch from python to C++ is still a strange change for me.\n";
+    cout << "Overall, I hope you enjoy my efforts and my improvements I make throughout this journey!\n\n";
+
+string FarewellWord = "Goodbye!";
+    cout << FarewellWord;
+    return 0;
+
+}
