@@ -25,8 +25,33 @@ int main (){
     cin >> users_first_name; //computer puts user name into variable 
     cout << "Well then " << users_first_name << " have fun!"; // response after users input 
 
+    // start the game
+
+    cout << "Lets begin the game!\n"; 
+    cout << "I now have a number in my head thats from 1 - 100, try to guess it!\n\n";
+
+    //generate random number
+
+     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count(); // gets a unique number based on the systems clock
+
+    mt19937 gen(seed); // the actual generator that makes random data (aka the mersenne twister)
+
+    uniform_int_distribution<> distrib(1, 100); // Distribution of random numbers in wide range 
+
+    int random_num = distrib(gen); 
+  
+    //ask for users answer
+
+    int users_guess;
+    cout << "Enter your guess here: ";
+    cin >> users_guess;
+    
+    //set conditional statements according to the users input
+
+    // repeat process 
     return 0;
 }
+
 
 
 
