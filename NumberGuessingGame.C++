@@ -19,11 +19,14 @@ int main (){
 
     // Welcoming text into game and asking for name
 
-    cout << "Lets start this game!\n";
-    // ask here for usesers name and save it in variable
-    // then put " Well then (user name), have fun!"
+   std:string users_first_name; // allows for there to be variable for strings 
+    cout << "Before we start the game, whats your first name?: "; // where the user will put their name
+
+    cin >> users_first_name; //computer puts user name into variable 
+    cout << "Well then " << users_first_name << " have fun!"; // response after users input 
 
     return 0;
 }
+
 
 
