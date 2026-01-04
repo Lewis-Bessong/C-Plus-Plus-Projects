@@ -1,5 +1,7 @@
 #include <iostream>
-#include <string>
+#include <string> // tools for having text 
+#include <random> // tools for generating random things
+#include <chrono> // for specifically making sure something newly random is generated
 
 using namespace std;
 
@@ -51,6 +53,7 @@ int main (){
     // repeat process 
     return 0;
 }
+
 
 
 
