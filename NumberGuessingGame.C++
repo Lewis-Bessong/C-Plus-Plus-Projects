@@ -48,11 +48,48 @@ int main (){
     cout << "Enter your guess here: ";
     cin >> users_guess;
     
-    //set conditional statements according to the users input
+    // If user guesses low 
 
-    // repeat process 
+    if (users_guess < random_num) {
+        cout << "Guess Higher!" << endl;
+        while (users_guess < random_num) { 
+            cout << "Enter your guess here: ";
+            cin >> users_guess;
+        }    
+    }
+
+    // if user guesses high 
+
+    else if (users_guess > random_num) {
+        cout << "Guess Lower!" << endl;
+        while (users_guess > random_num) {
+            cout << "Enter your guess here: ";
+            cin >> users_guess;
+        }
+    }
+
+    //if user guess the right number 
+
+    else {
+        cout << "You Guessed The Right Number " << users_first_name << "!\n\n";
+
+        // ask if user wants to play again
+        string users_replay_answer;
+        cout << "Would you like to play again? (y/n): ";
+        cin >> users_replay_answer;
+
+        //conidtionals for their answer
+        if (users_replay_answer == "y") { 
+           
+            cout << "Good Boy" << endl;
+        }
+    }
+
+    
     return 0;
 }
+
+
 
 
 
