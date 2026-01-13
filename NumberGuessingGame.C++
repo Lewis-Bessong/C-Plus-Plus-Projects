@@ -29,113 +29,75 @@ int main () {
     std::cin >> users_first_name; //computer puts user name into variable 
     std::cout << "Well then " << users_first_name << " have fun!\n\n"; // response after users input 
 
-    // start the game
-
-    cout << "Lets begin the game!\n"; 
-    cout << "I now have a number in my head thats from 1 - 100, try to guess it!\n\n";
-
-    //generate random number
-
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count(); // gets a unique number based on the systems clock
-
-    mt19937 gen(seed); // the actual generator that makes random data (aka the mersenne twister)
-
-    uniform_int_distribution<> distrib(1, 100); // Distribution of random numbers in wide range 
-
-    int random_num = distrib(gen); 
-  
-    //ask for users answer
-     
-    int users_guess;
-    std::cout << "Enter your guess here: ";
-    std::cin >> users_guess;
-    
-
-    while (users_guess != random_num) { // will keep running these conditionals only if user doesnt guess right
-
-        if (users_guess < random_num) { // If guess is low 
-            std::cout << "Guess Higher!\n\n";
-        }
-
-        else if (users_guess > random_num) { // if guess is high 
-            std::cout << "Guess Lower!\n\n"; 
-        }
-
-        std::cout << "Enter your guess here: "; // ask the user for another guess 
-        std::cin >> users_guess;
-    }
-
-    if (users_guess == random_num) {
-        std::cout << "Congrats! You've Guessed The Right Number!\n\n";
-    }
-
-    // ask if user wants to play again
-    
     string users_replay_choice;
-    std::cout << "Would you like to play again " << users_first_name << "? ( Y / N ): ";
-    std::cin >> users_replay_choice;
+    do { 
+        // ======= RUN GAME ======
 
-    while (users_replay_choice == "Y") {
+        cout << "Lets begin the game!\n"; 
+        cout << "I now have a number in my head thats from 1 - 100, try to guess it!\n\n";
 
-        // load new number
+        //generate random number
+
         unsigned seed = std::chrono::system_clock::now().time_since_epoch().count(); // gets a unique number based on the systems clock
 
         mt19937 gen(seed); // the actual generator that makes random data (aka the mersenne twister)
 
         uniform_int_distribution<> distrib(1, 100); // Distribution of random numbers in wide range 
 
-        int replay_random_num = distrib(gen);
-
-        std::cout << "\nOkay lets play again!\n";
-        std::cout << "I have a different number from the last one, Try and guess!\n\n";
+        int random_num = distrib(gen); 
+  
+        //ask for users answer
+     
+        int users_guess;
         std::cout << "Enter your guess here: ";
-
-        // users input 
-        int users_replay_guess;
-        std::cin >> users_replay_guess;
+        std::cin >> users_guess;
     
-        while (users_replay_guess != replay_random_num) { // will keep running these conditionals only if user doesnt guess right
 
-            if (users_replay_guess < replay_random_num) { // If guess is low 
+        while (users_guess != random_num) { // will keep running these conditionals only if user doesnt guess right
+
+            if (users_guess < random_num) { // If guess is low 
                 std::cout << "Guess Higher!\n\n";
             }
 
-            else if (users_replay_guess > replay_random_num) { // if guess is high 
+            else if (users_guess > random_num) { // if guess is high 
                 std::cout << "Guess Lower!\n\n"; 
             }
-            
-            std::cout << "Enter your guess here: ";
-            std::cin >> users_replay_guess;
+
+            std::cout << "Enter your guess here: "; // ask the user for another guess 
+            std::cin >> users_guess;
+
+            if (users_guess == random_num) {
+                std::cout << "Congrats! You've Guessed The Right Number!\n\n";
+            }
+
         }
 
-        if (users_replay_guess == users_replay_guess) {
-        std::cout << "Congrats! You've Guessed The Right Number!\n\n";
-        
+        // ===== ASK TO PLAY AGAIN =====
+        string users_replay_choice;
         std::cout << "Would you like to play again " << users_first_name << "? ( Y / N ): ";
         std::cin >> users_replay_choice;
+
+        // ==== HANDLE INVALID INPUT =====
+        while (users_replay_choice != "Y" && users_replay_choice != "N") {
+            std::cout << "\nSeems like you've entered the wrong thing, please make sure its just 'Y' or 'N' \n";
+            std::cout << "and make sure they are capitalized.\n\n";
+
+            std::cout << "Would you like to play again " << users_first_name << "? ( Y / N ): ";
+            std::cin >> users_replay_choice;
         }
 
-    }
-
-    if (users_replay_choice == "N") {
-        std::cout << "\nOkay! I hope you had a good time playing my game and hope you play again!\n";
-        std::cout << "Goodbye!" << endl;
-    }
-
-    else if (users_replay_choice != "Y" && "N") {
-        std::cout << "\nSeems like you've entered the wrong thing, please make sure its just 'Y' or 'N' \n";
-        std::cout << "and make sure they are capitalized.\n\n";
-
-        // ask again
-        std::cout << "Would you like to play again " << users_first_name << "? ( Y / N ): ";
-        std::cin >> users_replay_choice;
-    }
-
-    //After telling the user that they typed something wrong make the replay feature functionable
-    
+        // ==== EXIT IF N ====
+        if (users_replay_choice == "N") {
+            std::cout << "\nOkay! I hope you had a good time playing my game and hope you play again!\n";
+            std::cout << "Goodbye!" << endl;
+            std::exit(0);
+        }
+    } while (users_replay_choice == "Y");
 
     return 0;
 }
+
+
 
 
 
