@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <random>
+#include <vector>
 
 // This project will be my first self project with no plan/roadmap on how to do it, this will be all on me.
 // This project will be about dad jokes that will generate when the user needs it.
@@ -32,15 +33,48 @@ int main () {
 
     // ==== GAME START ==== RANDOMIZATION LOGIC START ====
 
+    std::vector<std::string> random_dad_jokes = {
+        "Why don't eggs tell jokes? They'd crack up.",
+        "Why did the scarecrow win an award? He was outstanding in his field.",
+        "I tried to catch fog yesterday... Mist it.",
+        "I used to hate facial hair, but then it grew on me."
+    };
 
-    /* 
+    int randomindex = rand() % random_dad_jokes.size();
     
-    This is where I will continue later , but try to find out how to generate a customized random group of strings 
-        and implement a 'do' function for when/if the user puts the wrong input.
+
+    // computer ask to play 
+
+    std::string users_answer_to_play;
+    std::cout << "Hey! Would you like to hear a joke? (Y/N): ";
+    std::cin >> users_answer_to_play; 
+
+    if (users_answer_to_play == "Y") {
+
+        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+        std::cout << "Funny Right!";
+
+    }
+
+    else if (users_answer_to_play == "N") {
+
+        std::cout << "Have a good time!";
+
+    }
+
+    else {
+
+        std::cout << "Uh oh, you've most likely entered the wrong thing, please make sure your input is just 'Y' or 'N'\n";
+        std::cout << "while making them capitialcase.";
+
+    }
+
+    /*
+        Next to do is add a replay feature (with the do function) and add more jokes,
+        later when done with that think of how to make the question available if user puts invalid input.
 
     */
 
-
-
     return 0;
 }
+
