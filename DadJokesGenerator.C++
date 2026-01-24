@@ -58,63 +58,65 @@ int main () {
     std::cout << "Would you like to hear a joke? (Y/N): ";
     std::cin >> users_answer_to_play; 
 
-    if (users_answer_to_play == "Y") {
+    if (users_answer_to_play == "Y" or "y") {
 
-        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
-        std::cout << "Funny Right!";
+        std::string random_dad_jokes;
+        std::cout << "\n\n" << random_dad_jokes << "\n";
+        
+        std::string users_replay_choice;
+        std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+        std::cin >> users_replay_choice;
+
+        
+        do {
+            std::string random_dad_jokes;
+            std::cout << "\n\n" << random_dad_jokes << "\n";
+
+            std::string users_replay_choice;
+            std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+            std::cin >> users_replay_choice;
+
+        } while (users_replay_choice == "Y" or "y");
+
+        if (users_replay_choice == "N" or "n") {
+
+            std::cout << "Thank you for playing, Goodbye!";
+            return 0;
+        }
+        
+        
+        do { 
+
+            std::cout << "You've entered the wrong input, please only put the single letter inputs of \n";
+            std::cout << "'Y', 'y', 'N', and 'n'.\n\n";
+
+            std::string users_replay_choice;
+            std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+            std::cin >> users_replay_choice;
+
+        } while (users_replay_choice != "Y" or "y" and users_replay_choice != "N" or "n"); 
+    
+        
 
     }
 
-    else if (users_answer_to_play == "N") {
+    else if (users_answer_to_play == "N" or "n") { 
 
-        std::cout << "Have a good time!";
-
+        std::cout << "Then go away.";
+        return 0;
     }
 
     else {
 
-        std::cout << "Uh oh, you've most likely entered the wrong thing, please make sure your input is just 'Y' or 'N'\n";
-        std::cout << "while making them capitialcase. Lets try again!\n\n";
+        std::cout << " still working on this. ";
 
-        do {
-            std::string users_answer_to_play;
-            std::cout << "Would you like to hear a joke? (Y/N): ";
-            std::cin >> users_answer_to_play; 
-
-            if (users_answer_to_play == "Y") {
-
-                std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
-                std::cout << "Funny Right!";
-            }
-
-            else if (users_answer_to_play == "N") {
-
-                std::cout << "Have a good time!";
-
-            }
-
-            else {
-
-                std::cout << "Uh oh, you've most likely entered the wrong thing, please make sure your input is just 'Y' or 'N'\n";
-                std::cout << "while making them capitialcase. Lets try again!\n\n";
-
-            }
-        } while (users_answer_to_play != "Y" && users_answer_to_play != "N");
-        
-    } 
-
-    std::string users_replay_choice;
-    std::cout << "Do you want to hear another one :) ? (Y/N): ";
-    std::cin >> users_replay_choice;
-
+    }
 
     /*
-        Next to do is add a replay feature (with the do function) and add more jokes,
-        later when done with that think of how to make the question available if user puts invalid input.
+    
+    When you come back do a test run of the code then figure out why its blank when the user says yes for the joke.
 
     */
-
-    // MAKE SURE TO MAKE A PUSH COMMIT TO BRANCH AND MAIN  FOR THIS CODE BEFORE ADDING FROM HERE ON OUT 
 
     return 0;
 }
