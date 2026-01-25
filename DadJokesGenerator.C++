@@ -58,65 +58,44 @@ int main () {
     std::cout << "Would you like to hear a joke? (Y/N): ";
     std::cin >> users_answer_to_play; 
 
-    if (users_answer_to_play == "Y" or "y") {
 
-        
-        std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
-        
-        std::string users_replay_choice;
-        std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
-        std::cin >> users_replay_choice;
+    // ==== INPUT LOGIC STARTS ====
 
-        
-        do {
-            
+    while (users_answer_to_play != "Y" or "y" and users_answer_to_play != "N" or "n") {
+
+        std::cout << "\n\n ERROR:INPUT\n";
+        std::cout << "Please only input the single letters 'Y' or 'N', capitalization does not matter.\n\n";
+
+        std::string users_answer_to_play;
+        std::cout << "Would you like to hear a joke? (Y/N): ";
+        std::cin >> users_answer_to_play;
+
+        if (users_answer_to_play == "Y" or "y") {
+
             std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
 
-            std::string users_replay_choice;
-            std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
-            std::cin >> users_replay_choice;
-
-        } while (users_replay_choice == "Y" or "y"); 
-
-        if (users_replay_choice == "N" or "n") {
-
-            std::cout << "Thank you for playing, Goodbye!";
-            return 0;
         }
-        
-        
-        do { 
 
-            std::cout << "You've entered the wrong input, please only put the single letter inputs of \n";
-            std::cout << "'Y', 'y', 'N', and 'n'.\n\n";
+        else if (users_answer_to_play == "N" or  "n") {
 
-            std::string users_replay_choice;
-            std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
-            std::cin >> users_replay_choice;
+            std::cout << "\n\nGet outta here then.";
+            return 0;
 
-        } while (users_replay_choice != "Y" or "y" and users_replay_choice != "N" or "n"); 
-        
-        
+        }
+    }
+
+    if (users_answer_to_play == "Y" or "y") {
+
+        std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
 
     }
 
-    else if (users_answer_to_play == "N" or "n") { 
+    else if (users_answer_to_play == "N" or "n") {
 
-        std::cout << "Then go away.";
-        return 0;
-    }
-
-    else {
-
-        std::cout << " still working on this. ";
+        std::cout << "Then what are you doing here, bye ig.";
 
     }
-
-    /*
-    
-    When you come back do a test run of the code then figure out why its blank when the user says yes for the joke.
-
-    */
 
     return 0;
 }
+
