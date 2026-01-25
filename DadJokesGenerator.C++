@@ -60,23 +60,23 @@ int main () {
 
     if (users_answer_to_play == "Y" or "y") {
 
-        std::string random_dad_jokes;
-        std::cout << "\n\n" << random_dad_jokes << "\n";
+        
+        std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
         
         std::string users_replay_choice;
-        std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+        std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
         std::cin >> users_replay_choice;
 
         
         do {
-            std::string random_dad_jokes;
-            std::cout << "\n\n" << random_dad_jokes << "\n";
+            
+            std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
 
             std::string users_replay_choice;
-            std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+            std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
             std::cin >> users_replay_choice;
 
-        } while (users_replay_choice == "Y" or "y");
+        } while (users_replay_choice == "Y" or "y"); 
 
         if (users_replay_choice == "N" or "n") {
 
@@ -91,11 +91,11 @@ int main () {
             std::cout << "'Y', 'y', 'N', and 'n'.\n\n";
 
             std::string users_replay_choice;
-            std::cout << "Would you like to play again? (Y?N): "; //ask to play again
+            std::cout << "Would you like to hear another joke? (Y?N): "; //ask to play again
             std::cin >> users_replay_choice;
 
         } while (users_replay_choice != "Y" or "y" and users_replay_choice != "N" or "n"); 
-    
+        
         
 
     }
