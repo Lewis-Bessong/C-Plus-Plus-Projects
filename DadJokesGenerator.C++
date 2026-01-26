@@ -58,63 +58,50 @@ int main () {
     std::cout << "Would you like to hear a joke? (Y/N): ";
     std::cin >> users_answer_to_play; 
 
-    if (users_answer_to_play == "Y") {
+
+    // ==== INPUT LOGIC STARTS ====
+
+    if (users_answer_to_play == "Y" || users_answer_to_play == "y") {
 
         std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
-        std::cout << "Funny Right!";
+
+    } else if (users_answer_to_play == "N" || users_answer_to_play == "n") {
+
+        std::cout << "Get outta here then.";
+        return 0;
+
+    } else {
+
+        std::cout << " ++ERROR++ ";
 
     }
 
-    else if (users_answer_to_play == "N") {
-
-        std::cout << "Have a good time!";
-
-    }
-
-    else {
-
-        std::cout << "Uh oh, you've most likely entered the wrong thing, please make sure your input is just 'Y' or 'N'\n";
-        std::cout << "while making them capitialcase. Lets try again!\n\n";
-
-        do {
-            std::string users_answer_to_play;
-            std::cout << "Would you like to hear a joke? (Y/N): ";
-            std::cin >> users_answer_to_play; 
-
-            if (users_answer_to_play == "Y") {
-
-                std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
-                std::cout << "Funny Right!";
-            }
-
-            else if (users_answer_to_play == "N") {
-
-                std::cout << "Have a good time!";
-
-            }
-
-            else {
-
-                std::cout << "Uh oh, you've most likely entered the wrong thing, please make sure your input is just 'Y' or 'N'\n";
-                std::cout << "while making them capitialcase. Lets try again!\n\n";
-
-            }
-        } while (users_answer_to_play != "Y" && users_answer_to_play != "N");
-        
-    } 
+    // ==== GAME REPLAY ====
 
     std::string users_replay_choice;
-    std::cout << "Do you want to hear another one :) ? (Y/N): ";
+    std::cout << "Do you want to hear another one ?? (Y/N); ";
     std::cin >> users_replay_choice;
 
+    while (users_replay_choice == "Y" || users_replay_choice == "y") {
 
-    /*
-        Next to do is add a replay feature (with the do function) and add more jokes,
-        later when done with that think of how to make the question available if user puts invalid input.
+        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
 
-    */
+        std::string users_replay_choice;
+        std::cout << "Do you want to hear another one ?? (Y/N); ";
+        std::cin >> users_replay_choice;
 
-    // MAKE SURE TO MAKE A PUSH COMMIT TO BRANCH AND MAIN  FOR THIS CODE BEFORE ADDING FROM HERE ON OUT 
+    } if (users_replay_choice == "N" || users_replay_choice == "n") {
 
+        std::cout << "\nEnjoy the joke, and make sure to share!!";
+        return 0;
+    } else {
+
+        std::cout << " ERROR ";
+        return 0;
+
+    }
+
+    
     return 0;
 }
+
