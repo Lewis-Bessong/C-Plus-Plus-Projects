@@ -82,26 +82,34 @@ int main () {
     std::cout << "Do you want to hear another one ?? (Y/N); ";
     std::cin >> users_replay_choice;
 
-    while (users_replay_choice == "Y" || users_replay_choice == "y") {
-
-        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+    do{
 
         std::string users_replay_choice;
         std::cout << "Do you want to hear another one ?? (Y/N); ";
         std::cin >> users_replay_choice;
 
-    } if (users_replay_choice == "N" || users_replay_choice == "n") {
 
-        std::cout << "\nEnjoy the joke, and make sure to share!!";
-        return 0;
-    } else {
+        if (users_replay_choice == "Y" || users_replay_choice == "y") {
 
-        std::cout << " ERROR ";
-        return 0;
+            std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
 
-    }
+        } else if (users_replay_choice == "N" || users_replay_choice == "n"){
+
+            std::cout << "\nEnjoy the jokes and make sure to share!!";
+            return 0;
+
+        } else{
+
+            std::cout << "\n ERROR \n";
+            std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.";
+
+        }
+
+
+    } while (users_replay_choice != "N" || users_replay_choice != "n");
 
     
     return 0;
 }
+
 
