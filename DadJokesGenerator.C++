@@ -61,41 +61,47 @@ int main () {
 
     // ==== INPUT LOGIC STARTS ====
 
-    while (users_answer_to_play != "Y" or "y" and users_answer_to_play != "N" or "n") {
+    if (users_answer_to_play == "Y" || users_answer_to_play == "y") {
 
-        std::cout << "\n\n ERROR:INPUT\n";
-        std::cout << "Please only input the single letters 'Y' or 'N', capitalization does not matter.\n\n";
+        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
 
-        std::string users_answer_to_play;
-        std::cout << "Would you like to hear a joke? (Y/N): ";
-        std::cin >> users_answer_to_play;
+    } else if (users_answer_to_play == "N" || users_answer_to_play == "n") {
 
-        if (users_answer_to_play == "Y" or "y") {
+        std::cout << "Get outta here then.";
+        return 0;
 
-            std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
+    } else {
 
-        }
-
-        else if (users_answer_to_play == "N" or  "n") {
-
-            std::cout << "\n\nGet outta here then.";
-            return 0;
-
-        }
-    }
-
-    if (users_answer_to_play == "Y" or "y") {
-
-        std::cout << "\n\n" << random_dad_jokes[randomindex] << "\n";
+        std::cout << " ++ERROR++ ";
 
     }
 
-    else if (users_answer_to_play == "N" or "n") {
+    // ==== GAME REPLAY ====
 
-        std::cout << "Then what are you doing here, bye ig.";
+    std::string users_replay_choice;
+    std::cout << "Do you want to hear another one ?? (Y/N); ";
+    std::cin >> users_replay_choice;
+
+    while (users_replay_choice == "Y" || users_replay_choice == "y") {
+
+        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+
+        std::string users_replay_choice;
+        std::cout << "Do you want to hear another one ?? (Y/N); ";
+        std::cin >> users_replay_choice;
+
+    } if (users_replay_choice == "N" || users_replay_choice == "n") {
+
+        std::cout << "\nEnjoy the joke, and make sure to share!!";
+        return 0;
+    } else {
+
+        std::cout << " ERROR ";
+        return 0;
 
     }
 
+    
     return 0;
 }
 
