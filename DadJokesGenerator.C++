@@ -49,32 +49,39 @@ int main () {
         "Listen to my pizza joke.... wait no its to cheesy." // 10
     };
 
-   int randomindex = rand() % random_dad_jokes.size();
+  int randomindex = rand() % random_dad_jokes.size();
     
 
     // computer ask to play 
 
-    std::string users_answer_to_play;
-    std::cout << "Would you like to hear a joke? (Y/N): ";
-    std::cin >> users_answer_to_play; 
+    std::string users_choice_to_play;
+
+    do{
+
+        std::string users_choice_to_play;
+        std::cout << "\nDo you want to hear a dad joke ?? (Y/N); ";
+        std::cin >> users_choice_to_play;
 
 
-    // ==== INPUT LOGIC STARTS ====
+        if (users_choice_to_play == "Y" || users_choice_to_play == "y") {
 
-    if (users_answer_to_play == "Y" || users_answer_to_play == "y") {
+            std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
 
-        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+        } else if (users_choice_to_play == "N" || users_choice_to_play == "n"){
 
-    } else if (users_answer_to_play == "N" || users_answer_to_play == "n") {
+            std::cout << "\nEnjoy the jokes and make sure to share!!";
+            return 0;
 
-        std::cout << "Get outta here then.";
-        return 0;
+        } else{
 
-    } else {
+            std::cout << "\n ERROR \n";
+            std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.";
 
-        std::cout << " ++ERROR++ ";
+        }
 
-    }
+
+    } while (users_choice_to_play != "N" || users_choice_to_play != "n");
+
 
     // ==== GAME REPLAY ====
 
