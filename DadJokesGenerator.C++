@@ -49,7 +49,7 @@ int main () {
         "Listen to my pizza joke.... wait no its to cheesy." // 10
     };
 
-    int randomindex = rand() % random_dad_jokes.size();
+   int randomindex = rand() % random_dad_jokes.size();
     
 
     // computer ask to play 
@@ -79,13 +79,11 @@ int main () {
     // ==== GAME REPLAY ====
 
     std::string users_replay_choice;
-    std::cout << "Do you want to hear another one ?? (Y/N); ";
-    std::cin >> users_replay_choice;
 
     do{
 
         std::string users_replay_choice;
-        std::cout << "Do you want to hear another one ?? (Y/N); ";
+        std::cout << "\nDo you want to hear another one ?? (Y/N); ";
         std::cin >> users_replay_choice;
 
 
