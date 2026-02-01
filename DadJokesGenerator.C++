@@ -49,13 +49,59 @@ int main () {
         "Listen to my pizza joke.... wait no its to cheesy." // 10
     };
 
-  int randomindex = rand() % random_dad_jokes.size();
+    int randomindex = rand() % random_dad_jokes.size();
     
 
     // computer ask to play 
 
     std::string users_choice_to_play;
+    std::cout << "\nDo you want to hear a dad joke ?? (Y/N); ";
+    std::cin >> users_choice_to_play;
 
+    if (users_choice_to_play == "Y" || users_choice_to_play == "y") {
+
+        std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+
+
+    } else if (users_choice_to_play == "N" || users_choice_to_play == "n"){
+
+        std::cout << "\nEnjoy the jokes and make sure to share!!";
+        return 0;
+
+    } else{
+
+        do{
+
+            std::cout << "\n ERROR \n";
+            std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.";
+
+            std::string users_choice_to_play;
+            std::cout << "\nDo you want to hear a dad joke ?? (Y/N); ";
+            std::cin >> users_choice_to_play;
+
+
+            if (users_choice_to_play == "Y" || users_choice_to_play == "y") {
+
+                std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+
+
+            } else if (users_choice_to_play == "N" || users_choice_to_play == "n"){
+
+                std::cout << "\nEnjoy the jokes and make sure to share!!";
+                return 0;
+
+            } else{
+
+                std::cout << "\n ERROR \n";
+                std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.\n\n";
+
+            }
+
+        } while (users_choice_to_play != "Y" && users_choice_to_play != "y" || users_choice_to_play != "N" && users_choice_to_play != "n");
+
+    }
+
+    /*
     do{
 
         std::string users_choice_to_play;
@@ -66,6 +112,7 @@ int main () {
         if (users_choice_to_play == "Y" || users_choice_to_play == "y") {
 
             std::cout << "\n" << random_dad_jokes[randomindex] << "\n";
+
 
         } else if (users_choice_to_play == "N" || users_choice_to_play == "n"){
 
@@ -82,6 +129,7 @@ int main () {
 
     } while (users_choice_to_play != "N" || users_choice_to_play != "n");
 
+    */
 
     // ==== GAME REPLAY ====
 
