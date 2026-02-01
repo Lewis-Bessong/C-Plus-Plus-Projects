@@ -1,5 +1,6 @@
 # C-Plus-Plus-Projects
 A breif description of this repostiroy.  
-# Hello 🖐, welcome to my repostitory that consist of only the C++ language, this repostitory also consit of projects that I have made, some that are self projects and some that are guided projects. 
-# I make projects that are ethier basic so I can develop my knowldege and Self projects that I make based on the knowledge ive gained. Overall, this repository keeps files of what ive been working on in Vsvode but specifically for C++.
-This repostiory is mostly used to show my skills in C++, and is open for suggestions.
+# Hello 🖐, welcome to my repostitory that consist of only my C++ projects, this repostitory is my first repository that ive ever made, which consist of basic projects that are etheir guided or self made. 
+# I make projects that are basic like these so I can develop my knowldege to be able to some day contribute to some big things later, maybe games or websites, but overall this repository holds my babystep projects that are guided or self made. 
+# Thank you for reading and I hope you enjoy my projects. 
+This repostiory is mostly used to show my skills in C++, and is open for suggestions/crituqes.
