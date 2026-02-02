@@ -47,6 +47,14 @@ int main () {
         "I have a joke about construction... wait im still working on it.", // 8
         "Why'd the computor go to the doctor? Because it caught a virus.", // 9
         "Listen to my pizza joke.... wait no its to cheesy." // 10
+        "I asked my dog what's two minus two... he said nothing." //11 
+        "Why can't your nose be 12 inches long? then it would be a foot." //12
+        "I used to play piano by ear.. now i use my hands." //13 
+        "I used to be adicted to soap.. but im clean now." //14
+        "I told my plant a joke.. it needed time to grow on it tho." //15
+        "I'm reading a book about glue, but im stuck on chapter one." //16 
+        "Why did the coffe file a police report... it got mugged." //17
+        "I tried to make a belt out of watches, it was a waste of time." // 18
     };
 
     int randomindex = rand() % random_dad_jokes.size();
@@ -137,5 +145,6 @@ int main () {
 
     // find out why vector is only printing index 4 of 14 jokes.
 }
+
 
 
