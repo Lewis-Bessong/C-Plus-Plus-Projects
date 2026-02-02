@@ -39,7 +39,7 @@ int main () {
         "Why did the scarecrow win an award? He was outstanding in his field.", // 1 
         "I tried to catch fog yesterday... Mist it.", // 2 
         "I used to hate facial hair, but then it grew on me.",
-        "Im reading a book about anti-gravity. It's impossible to put down.", // 3 
+        "Im reading a book about anti-gravity. It's impossible to put down.", // 3
         "I don't trust stairs.... they're always up to something.", // 4
         "I'm on a seafood diet, I see food and then I eat it.", // 5
         "Why don't skeletons fight each other? its because they don't have the guts too.", // 6 
@@ -71,8 +71,9 @@ int main () {
     } else{
 
         do{
+            int randomindex = rand() % random_dad_jokes.size();
 
-            std::cout << "\nPlease make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.\n";
+            std::cout << "\nPlease make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.\n\n";
 
             std::string users_choice_to_play;
             std::cout << "\nDo you want to hear a dad joke ?? (Y/N); ";
@@ -105,6 +106,7 @@ int main () {
     std::string users_replay_choice;
 
     do{
+        int randomindex = rand() % random_dad_jokes.size();
 
         std::string users_replay_choice;
         std::cout << "\nDo you want to hear another one ?? (Y/N); ";
@@ -123,7 +125,7 @@ int main () {
         } else{
 
             std::cout << "\n ERROR \n";
-            std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.";
+            std::cout << "Please make sure you enter the correct input, 'y', 'Y', 'N', or 'n' are the only acceptions.\n\n";
 
         }
 
