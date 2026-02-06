@@ -7,9 +7,21 @@ int main() {
 
 // think of board representation first( create a board and initialize it)
 
-char board[3][3];
+char board[3][3]; // 3 x 3 board representaion for game 
 
 // find out how to display board
+
+std::cout << "|      |       |       |\n";
+std::cout << "|      |       |       |\n";
+std::cout << "|______|_______|_______|\n";
+std::cout << "|      |       |       |\n";
+std::cout << "|      |       |       |\n";
+std::cout << "|______|_______|_______|\n";
+std::cout << "|      |       |       |\n";
+std::cout << "|      |       |       |\n";
+std::cout << "------------------------\n";
+
+
 
 // find out player moves (turn logic)
 
