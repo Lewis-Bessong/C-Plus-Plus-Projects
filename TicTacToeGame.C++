@@ -1,14 +1,13 @@
 // This game is a guided projected that will be based on the tic tac toe game 
 #include <iostream>
+#include <vector>
 
 using namespace std;
-
-int main() {
 
 /*
 HOW TO STORE THE BOARD ?
 
-* with a 2D Vector 
+* with a 2D Vector or 2D Array 
 
 HOW WILL A PLAYERS CHOOSE A MOVE?
 
@@ -18,7 +17,17 @@ WHEN DOES THE GAME END?
 */
 
 
+void game_board() {
+
+    char board[3][3]; //
+
+
+}
+
+int main() {
 // === BOARD CREATION ===
+
+game_board();
 
 // === TRACK PLAYER ===
 
@@ -32,9 +41,7 @@ WHEN DOES THE GAME END?
 
 // === LOGIC FOR WIN ===
 
-
-
-
 return 0;
 }
+
 
