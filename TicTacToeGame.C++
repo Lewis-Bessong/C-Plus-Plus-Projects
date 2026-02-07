@@ -5,30 +5,36 @@ using namespace std;
 
 int main() {
 
-// think of board representation first( create a board and initialize it)
+/*
+HOW TO STORE THE BOARD ?
 
-char board[3][3]; // 3 x 3 board representaion for game 
+* with a 2D Vector 
 
-// find out how to display board
+HOW WILL A PLAYERS CHOOSE A MOVE?
 
-std::cout << "|      |       |       |\n";
-std::cout << "|      |       |       |\n";
-std::cout << "|______|_______|_______|\n";
-std::cout << "|      |       |       |\n";
-std::cout << "|      |       |       |\n";
-std::cout << "|______|_______|_______|\n";
-std::cout << "|      |       |       |\n";
-std::cout << "|      |       |       |\n";
-std::cout << "------------------------\n";
+HOW DO I KNOW WHOSE TURN IT IS?
+
+WHEN DOES THE GAME END?
+*/
 
 
+// === BOARD CREATION ===
 
-// find out player moves (turn logic)
+// === TRACK PLAYER ===
 
-// Find out how to do win checking (logic for win or lose)
+// === DISPLAY BOARD EVRY TURN ===
 
-// Find out how to do game loop (replay logic)
+// === PLAYER INPUT ===
+
+// === INPUT VALIDATION/LOGIC ===
+
+// === INPUT SYMBOL
+
+// === LOGIC FOR WIN ===
+
+
 
 
 return 0;
 }
+
